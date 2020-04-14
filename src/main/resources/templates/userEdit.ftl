@@ -2,7 +2,6 @@
 
 <@c.page>
 User editor
-    <span><a href="/user">User list</a></span>
     <form action="/user" method="post">
         <label>
             <input type="text" name="username" value="${user.username}">

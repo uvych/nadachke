@@ -19,6 +19,5 @@
             </tr>
         </#list>
         </tbody>
-        <span><a href="/main">Return</a></span>
     </table>
 </@c.page>

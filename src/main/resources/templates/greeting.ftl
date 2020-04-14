@@ -1,7 +1,7 @@
 <#import  "parts/common.ftl" as c>
 
 <@c.page>
-    <div>Privet dachnik!</div>
-    <a href="/main">Main page</a>
+    <h5>Privet , dachnik!</h5>
+    <div>This app is for VASHNILYAN</div>
 </@c.page>
 
