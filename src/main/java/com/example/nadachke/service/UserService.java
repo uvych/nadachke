@@ -1,10 +1,8 @@
 package com.example.nadachke.service;
 
-import antlr.StringUtils;
 import com.example.nadachke.domain.Role;
 import com.example.nadachke.domain.User;
 import com.example.nadachke.repos.UserRepo;
-import org.graalvm.compiler.virtual.nodes.MaterializedObjectState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -38,7 +36,7 @@ public class UserService implements UserDetailsService {
             return false;
         }
 
-        user.setActive(true);
+        user.setActive(false);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
 
@@ -62,10 +60,11 @@ public class UserService implements UserDetailsService {
             return false;
         }
 
+        user.setActive(true);
         user.setActivationCode(null);
 
         userRepo.save(user);
 
-        return false;
+        return true;
     }
 }
