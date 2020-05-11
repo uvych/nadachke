@@ -1,5 +1,9 @@
 package com.example.nadachke.service;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d368e73be017864a95af81c6d16a857f3a3258d
 import com.example.nadachke.domain.Role;
 import com.example.nadachke.domain.User;
 import com.example.nadachke.repos.UserRepo;
@@ -59,7 +63,11 @@ public class UserService implements UserDetailsService {
         if (user == null) {
             return false;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 6d368e73be017864a95af81c6d16a857f3a3258d
         user.setActive(true);
         user.setActivationCode(null);
 
